@@ -1,13 +1,13 @@
 Summary:	renattach - rename/delete dangerous email attachments
 Summary(pl):	renattach - zmiana nazwy/usuwanie niebezpiecznych za³±czników z e-maili
 Name:		renattach
-Version:	1.2.1
+Version:	1.2.2
 Release:	0.1
 Epoch:		0
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.pc-tools.net/files/unix/%{name}-%{version}.tar.gz
-# Source0-md5:	bd6bbcb74d8a7f8a94655aa73c1ab5ce
+# Source0-md5:	2a9c7c31ba618ea751fc0ba7a81836f8
 Patch0:		%{name}-getopt_in_glibc.patch
 URL:		http://www.pc-tools.net/unix/renattach/
 BuildRequires:	autoconf

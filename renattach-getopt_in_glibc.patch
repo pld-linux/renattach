@@ -1,21 +1,6 @@
-diff -Nura renattach-1.2.1.orig/configure.ac renattach-1.2.1.work/configure.ac
---- renattach-1.2.1.orig/configure.ac	2004-05-14 14:05:36.000000000 +0200
-+++ renattach-1.2.1.work/configure.ac	2004-05-14 14:07:14.000000000 +0200
-@@ -5,9 +5,9 @@
- AC_PROG_CC
- AC_PROG_INSTALL
- AC_HEADER_STDC
--AC_CHECK_HEADERS(memory.h stdlib.h string.h strings.h signal.h syslog.h unistd.h)
-+AC_CHECK_HEADERS(memory.h stdlib.h string.h strings.h signal.h syslog.h unistd.h getopt.h)
- AC_C_CONST
- AC_FUNC_MALLOC
--AC_CHECK_FUNCS(ftruncate memset strcasecmp strchr strncasecmp strrchr strstr)
-+AC_CHECK_FUNCS(ftruncate memset strcasecmp strchr strncasecmp strrchr strstr getopt)
- AC_CONFIG_FILES(Makefile src/Makefile conf/Makefile)
- AC_OUTPUT
-diff -Nura renattach-1.2.1.orig/src/Makefile.am renattach-1.2.1.work/src/Makefile.am
---- renattach-1.2.1.orig/src/Makefile.am	2004-05-14 14:05:36.000000000 +0200
-+++ renattach-1.2.1.work/src/Makefile.am	2004-05-14 14:19:14.000000000 +0200
+diff -burN renattach-1.2.2.orig/src/Makefile.am renattach-1.2.2/src/Makefile.am
+--- renattach-1.2.2.orig/src/Makefile.am	2005-01-09 19:51:57.986974464 +0100
++++ renattach-1.2.2/src/Makefile.am	2005-01-10 10:51:59.771046048 +0100
 @@ -1,5 +1,5 @@
  AM_CFLAGS = -pedantic -Wall -DCONF_DIR=\"$(sysconfdir)\"
  bin_PROGRAMS = renattach
@@ -23,9 +8,9 @@ diff -Nura renattach-1.2.1.orig/src/Makefile.am renattach-1.2.1.work/src/Makefil
 -renattach_SOURCES = renattach.c settings.c utility.c getopt.c getopt1.c \
 +renattach_SOURCES = renattach.c settings.c utility.c \
  	renattach.h strings-en.h utility.h getopt.h
-diff -Nura renattach-1.2.1.orig/src/renattach.c renattach-1.2.1.work/src/renattach.c
---- renattach-1.2.1.orig/src/renattach.c	2004-05-14 14:05:36.000000000 +0200
-+++ renattach-1.2.1.work/src/renattach.c	2004-05-14 14:09:35.000000000 +0200
+diff -burN renattach-1.2.2.orig/src/renattach.c renattach-1.2.2/src/renattach.c
+--- renattach-1.2.2.orig/src/renattach.c	2005-01-09 19:51:57.987974312 +0100
++++ renattach-1.2.2/src/renattach.c	2005-01-10 10:52:10.653391680 +0100
 @@ -26,7 +26,7 @@
  #include "renattach.h"
  #include "strings-en.h"
