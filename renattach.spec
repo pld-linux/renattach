@@ -1,5 +1,5 @@
 Summary:	renattach - rename/delete dangerous email attachments
-Summary(pl):	renattach - zmiana nazwy/usuwanie niebezpiecznych za³±czników email
+Summary(pl):	renattach - zmiana nazwy/usuwanie niebezpiecznych za³±czników z e-maili
 Name:		renattach
 Version:	1.2.1
 Release:	0.1
@@ -8,7 +8,7 @@ License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.pc-tools.net/files/unix/%{name}-%{version}.tar.gz
 # Source0-md5:	bd6bbcb74d8a7f8a94655aa73c1ab5ce
-Patch0:	%{name}-getopt_in_glibc.patch
+Patch0:		%{name}-getopt_in_glibc.patch
 URL:		http://www.pc-tools.net/unix/renattach/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,21 +26,21 @@ strains caused by modern virus floods.
 
 %description -l pl
 renattach jest szybkim i wydajnym filtrem potokowym, który mo¿e
-zmieniaæ nazwê lub usuwaæ potencjalnie niebezpieczne za³±czniki e-mail.
-Jest wysoce skutecznym sposobem zabezpieczania u¿ytkowników koñcowych
-przed szkodliw± zawarto¶ci± e-mail (robakami internetowymi/wirusami)
-poprzez unieszkodliwianie lub usuwanie za³±czników, które mog± byæ
-przypadkowo uruchomione przez u¿ytkowników. Filtr jest wywo³ywany jako
-prosty potok dla u¿ytku z szerokim wyborem systemów. W³a¶ciwo¶æ 'kill'
-(która likwiduje ca³e wiadomo¶ci) mo¿e tak¿e pomóc radziæ sobie z
-obci±¿eniem zasobów spowodowanym przez zalew nowoczesnych wirusów.
+zmieniaæ nazwê lub usuwaæ potencjalnie niebezpieczne za³±czniki z
+poczty elektronicznej. Jest wysoce skutecznym sposobem zabezpieczania
+u¿ytkowników koñcowych przed szkodliw± zawarto¶ci± listów (robakami
+internetowymi/wirusami) poprzez unieszkodliwianie lub usuwanie
+za³±czników, które mog± byæ przypadkowo uruchomione przez
+u¿ytkowników. Filtr jest wywo³ywany jako prosty potok dla u¿ytku z
+szerokim wyborem systemów. W³a¶ciwo¶æ 'kill' (która likwiduje ca³e
+wiadomo¶ci) mo¿e tak¿e pomóc radziæ sobie z obci±¿eniem zasobów
+spowodowanym przez zalew nowoczesnych wirusów.
 
 %prep
 %setup -q
 %patch0 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
