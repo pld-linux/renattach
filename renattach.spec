@@ -24,7 +24,16 @@ for use in a wide variety of systems. The 'kill' feature (which
 eliminates entire messages) can also help sites deal with resource
 strains caused by modern virus floods.
 
-#%%description -l pl
+%description -l pl
+renattach jest szybkim i wydajnym filtrem potokowym, który mo¿e
+zmieniaæ nazwê lub usuwaæ potencjalnie niebezpieczne za³±czniki e-mail.
+Jest wysoce skutecznym sposobem zabezpieczania u¿ytkowników koñcowych
+przed szkodliw± zawarto¶ci± e-mail (robakami internetowymi/wirusami)
+poprzez unieszkodliwianie lub usuwanie za³±czników, które mog± byæ
+przypadkowo uruchomione przez u¿ytkowników. Filtr jest wywo³ywany jako
+prosty potok dla u¿ytku z szerokim wyborem systemów. W³a¶ciwo¶æ 'kill'
+(która likwiduje ca³e wiadomo¶ci) mo¿e tak¿e pomóc radziæ sobie z
+obci±¿eniem zasobów spowodowanym przez zalew nowoczesnych wirusów.
 
 %prep
 %setup -q
