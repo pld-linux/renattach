@@ -6,7 +6,7 @@ Release:	0.1
 Epoch:		0
 License:	GPL
 Group:		Applications/Mail
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://www.pc-tools.net/files/unix/%{name}-%{version}.tar.gz
 # Source0-md5:	bd6bbcb74d8a7f8a94655aa73c1ab5ce
 Patch0:	%{name}-getopt_in_glibc.patch
 URL:		http://www.pc-tools.net/unix/renattach/
