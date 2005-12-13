@@ -65,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog INSTALL NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
