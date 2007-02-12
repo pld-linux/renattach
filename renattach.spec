@@ -1,5 +1,5 @@
 Summary:	renattach - rename/delete dangerous email attachments
-Summary(pl.UTF-8):   renattach - zmiana nazwy/usuwanie niebezpiecznych załączników z e-maili
+Summary(pl.UTF-8):	renattach - zmiana nazwy/usuwanie niebezpiecznych załączników z e-maili
 Name:		renattach
 Version:	1.2.2
 Release:	0.1
